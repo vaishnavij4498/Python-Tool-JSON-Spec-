@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["registers"],
+  "properties": {
+    "ip_name": {"type": "string"},
+    "registers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "address", "fields"],
+        "properties": {
+          "name": {"type": "string"},
+          "address": {"type": ["string", "integer"]},
+          "description": {"type": "string"},
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "bit_offset", "bit_width"],
+              "properties": {
+                "name": {"type": "string"},
+                "bit_offset": {"type": "integer"},
+                "bit_width": {"type": "integer"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

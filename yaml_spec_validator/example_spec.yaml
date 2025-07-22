@@ -1,0 +1,9 @@
+ip_name: Timer
+registers:
+  - name: CTRL
+    address: 0x00
+    description: Control register
+    fields:
+      - name: ENABLE
+        bit_offset: 0
+        bit_width: 1
